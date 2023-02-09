@@ -1,0 +1,2 @@
+# Count all message last two hours
+kafkacat -q -b $KAFKA_BROKERS -t LM_INCOMING_URLS -o s@$(date -d "2 hours ago" +%s%N | cut -b1-13) -o e@$(date +%s%N | cut -b1-13) | jq -c 'select(.source == "cyren_url_harvester")' | wc -l

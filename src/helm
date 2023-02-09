@@ -1,0 +1,2 @@
+# Create YAML from configs and deployment.
+helm template . -f ../configs/staging.yaml

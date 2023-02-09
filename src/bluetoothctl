@@ -1,0 +1,41 @@
+# =========[ New Device ]=========
+
+# Activate bluetoothctl shell
+bluetoothctl
+
+# turn on bluetooth
+power on
+scan on
+
+# Find the device name/ID
+scan off
+
+# Start pairing the device
+pair 04:52:C7:0F:61:43
+
+# Then connect to the device
+connect 04:52:C7:0F:61:43
+
+# Might need to start pulseaudio
+pulseaudio --start
+
+# Make sure to use the right configuration.
+pavucontrol
+
+# Change first configuration to A2DP sink and then change spotify application to use the headpone, the order is nessecary.
+
+# Ones, the only thing I had to do was to press play button on the headphone, the the A2DP profile was available in pavucontrol.
+
+# =========[ Already Paired Device ]=========
+
+# Activate bluetoothctl shell
+bluetoothctl
+
+# Turn on bluetooth
+power on
+
+# Start the agent
+# Should pair automatically
+agent on
+
+# it might pair automatcally, but i actually run pair <MAC address> and got failure, but after a certain mount of time it got automatically connected. 

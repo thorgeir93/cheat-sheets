@@ -1,0 +1,2 @@
+# Open K9S with right config
+$ k9s --kubeconfig ~/.kube/config

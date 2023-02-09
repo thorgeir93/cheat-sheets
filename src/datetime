@@ -1,0 +1,24 @@
+# Python datetime examples
+
+# From STR to ISOFORMAT
+# ref.: https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat
+```
+from datetime import datetime
+datetime.fromisoformat('2011-11-04T00:05:23')
+datetime.fromisoformat('2011-11-04T00:05:23+04:00')
+```
+
+# From STR to Custom format
+ts = datetime.strptime("2022-03-09 15:38:55", "%Y-%m-%d %H:%M:%S")
+
+
+# Create timestamp without tailing microseonds.
+datetime.utcnow().replace(microsecond=0)
+
+
+# isoformat
+>>> from datetime import datetime
+>>> datetime.utcnow().isoformat()
+'2022-05-17T14:52:21.388266'
+>>> datetime.utcnow().replace(microsecond=0).isoformat()
+'2022-05-17T14:52:34'

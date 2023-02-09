@@ -1,0 +1,4 @@
+
+# Remove inaccessable VMs from a cuckoo node.
+# Run as root inside cuckoo node.
+for vm in $(sudo su --command="vboxmanage list vms | grep inaccessible | grep -oP '{\K.*(?=})'" --shell=/bin/bash cuckoo); do echo $vm; python3 /var/data/gitlab/cuckoo_setup/vm_remove.py --vm-name=$vm --user=cuckoo; done

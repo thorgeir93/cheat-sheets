@@ -1,0 +1,2 @@
+# View images in timestamp order.
+feh -F $(exiftool -T -FileName -DateTimeOriginal . | awk '{ print $1; }')

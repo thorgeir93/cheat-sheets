@@ -1,0 +1,14 @@
+# If ./tests exists run:
+pytest
+
+# Get stdout
+pytest -s
+
+# Get full log output
+pytest -s -o log_cli=true -o log_cli_level=INFO
+
+# Specific test
+pytest -s -o log_cli=true -o log_cli_level=INFO -k "test_process_messages"
+
+# If test fails and should be fixed in the future.
+@pytest.mark.xfail(reason="fails due to a bug in url_formatter")

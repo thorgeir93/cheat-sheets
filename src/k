@@ -1,0 +1,12 @@
+# Shortcut for kubectl
+k
+
+# Get resource
+k get rs
+#> NAME                                                            DESIRED   CURRENT   READY   AGE
+#> feed2phisherman-db-to-resubmit-01-559f6f5998                    1         1         1       4d19h
+#> feed2phisherman-db-to-resubmit-01-5878dbd968                    0         0         0       5d18h
+
+# Get quota
+k get quota --all-namespaces
+
